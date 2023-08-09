@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ~~~~~~~~~~~ Global Styles ~~~~~~~~~~~~~~~~~ */
+
+* {
+  font-family: "Space Grotersk", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Credit Card Image Styles */
+.cc-front {
+  background: url("./images/bg-card-front.png") no-repeat center/cover;
+}
+
+.cc-back {
+  background: url("./images/bg-card-back.png") no-repeat center/cover;
+}
+.cc-front,
+.cc-back {
+  height: 200px;
+  width: 325px;
+  border-radius: 10px;
+}
+
+/* ~~~~~~~~~~~ DESKTOP STYLE ~~~~~~~~~~~~~~ */
+@media (min-width: 1024px) {
+  .cc-front,
+  .cc-back {
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+  }
 }
